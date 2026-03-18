@@ -28,8 +28,8 @@ In Terraform, Provider blocks and Resource blocks are two fundamental building b
 - **Resource blocks**: define the actual infrastructure components you want to create and manage (EC2 instances, databases, VPCs, etc.).
 
 ## 4. Challenges & Solutions
-Issue: EC2 failed to deploy because security group was not found
-Solution: Declared the security group before referencing it in the instance resource.
+- Issue: EC2 failed to deploy because security group was not found
+- Solution: Declared the security group before referencing it in the instance resource.
 
 ## 5. Code with Explanations
 
@@ -67,12 +67,4 @@ resource "aws_instance" "webserver" {
               echo "Hello Terraform!" > /var/www/html/index.html
               EOF
 }
-
 ---
-
-
-
-
-
-
-
