@@ -1,9 +1,10 @@
 # Deploying an EC2 Server with Terraform
 
-Terraform Challenge Day 3.  Today, we go hands on. Tasks:
--Spin up a webserver with Terraform 
--Master Terraform commands (init, apply, destroy) 
--Explain open Provider & Resource blocks – the heart of your infrastructure 
+Terraform Challenge Day 3.  Today, we go hands on. 
+- Tasks:
+- Spin up a webserver with Terraform 
+- Master Terraform commands (init, apply, destroy) 
+- Explain open Provider & Resource blocks – the heart of your infrastructure 
 
 ---
 
@@ -16,15 +17,15 @@ We will create:
 ---
 
 ## 2. Terraform Code with Explanations
--terraform init- Initializes the working directory and downloads necessary provider plugins.
--terraform plan- Shows a preview of resources Terraform will create, modify, or destroy.
--terraform apply- Deploys the resources to AWS.
--terraform destroy- Removes all resources created by Terraform.
+- **terraform init**- Initializes the working directory and downloads necessary provider plugins.
+- **terraform plan**- Shows a preview of resources Terraform will create, modify, or destroy.
+- **terraform apply**- Deploys the resources to AWS.
+- **terraform destroy**- Removes all resources created by Terraform.
 
 ## 4. Provider Block & Resourse block
 In Terraform, Provider blocks and Resource blocks are two fundamental building blocks that work together to manage infrastructure
--Provider block: configures the specific cloud provider or infrastructure platform you want to interact with (AWS, Azure, GCP, Kubernetes, etc.)
--Resource blocks: define the actual infrastructure components you want to create and manage (EC2 instances, databases, VPCs, etc.).
+- **Provider block**: configures the specific cloud provider or infrastructure platform you want to interact with (AWS, Azure, GCP, Kubernetes, etc.)
+- **Resource blocks**: define the actual infrastructure components you want to create and manage (EC2 instances, databases, VPCs, etc.).
 
 ## 4. Challenges & Solutions
 Issue: EC2 failed to deploy because security group was not found
