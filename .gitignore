@@ -1,0 +1,44 @@
+# ========================
+# Terraform folders and files
+# ========================
+
+# Local Terraform directories
+**/.terraform/
+
+# Terraform state files
+**/*.tfstate
+**/*.tfstate.backup
+
+# Terraform variable files (may contain secrets)
+**/*.tfvars
+
+# Crash logs
+**/crash.log
+
+# ========================
+# Sensitive files
+# ========================
+
+# Private keys
+**/*.pem
+
+# Environment files
+**/.env
+
+# Other secrets
+**/secret*
+**/credentials*
+
+# ========================
+# OS & editor files
+# ========================
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# VS Code
+.vscode/
