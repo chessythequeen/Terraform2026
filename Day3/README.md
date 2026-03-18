@@ -55,14 +55,17 @@ resource "aws_instance" "webserver" {
               echo "Hello Terraform!" > /var/www/html/index.html
               EOF
 }
-3. Terraform Commands 
+
+---
+### 3. Terraform Commands 
 Command	Purpose
 terraform init- Initializes the working directory and downloads necessary provider plugins.
 terraform plan- Shows a preview of resources Terraform will create, modify, or destroy.
 terraform apply- Deploys the resources to AWS.
 terraform destroy- Removes all resources created by Terraform.
 
-4. Challenges & Solutions
+---
+#### 4. Challenges & Solutions
 Issue: EC2 failed to deploy because security group was not found
 Solution: Declared the security group before referencing it in the instance resource.
 
