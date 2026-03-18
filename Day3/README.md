@@ -57,14 +57,16 @@ resource "aws_instance" "webserver" {
 }
 
 ---
+<details>
 
-## **3.Terraform Commands** 
+## 3.Terraform Commands
 Command	Purpose
 terraform init- Initializes the working directory and downloads necessary provider plugins.
 terraform plan- Shows a preview of resources Terraform will create, modify, or destroy.
 terraform apply- Deploys the resources to AWS.
 terraform destroy- Removes all resources created by Terraform.
 
+</details>
 ---
 
 ## **4. Challenges & Solutions**
