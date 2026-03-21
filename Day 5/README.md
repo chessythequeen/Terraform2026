@@ -64,9 +64,13 @@ Without it terraform would not know what already exists, what needs to change or
 
 ## Explore and Understand the State File
 After experimenting with the Terraform state file, I observed the following:
+
 1. Manual Modification of the State File
+   
 I manually edited the state file by adding a value to the security group configuration. When I ran terraform apply, Terraform returned an error (operation error).
 Finding: Directly modifying the state file can corrupt it or create inconsistencies between the actual infrastructure and Terraform’s understanding of it. This leads to failures during execution. The state file should not be manually edited unless absolutely necessary and done with extreme caution."
+
 2. Infrastructure Drift (Changes via AWS Console)
+   
 I added an additional rule to the security group directly from the AWS Management Console instead of updating the Terraform code.
 Finding: Terraform detected this as drift—a difference between the real infrastructure and the state file. When I ran terraform plan, it showed that Terraform intended to revert the changes and restore the configuration to match what is defined in the code.
