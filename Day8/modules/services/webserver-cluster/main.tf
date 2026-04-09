@@ -72,9 +72,14 @@ yum update -y
 yum install -y httpd
 systemctl enable httpd
 systemctl start httpd
-echo "Hello, Terraform Day 4! We made it, Guys" > /var/www/html/index.html
+echo "Hello, Zero down time test, yeeey!" > /var/www/html/index.html
 EOF
 )
+
+lifecycle {
+    create_before_destroy = true
+  }
+
 }
 
 resource "aws_lb_target_group" "tg" {
@@ -115,6 +120,7 @@ resource "aws_lb_listener" "listener" {
 }
 
 resource "aws_autoscaling_group" "web_asg" {
+  name_prefix = "${var.cluster_name}-${aws_launch_template.web_lt.name}"
   max_size             = var.min_size
   min_size             = var.max_size
   vpc_zone_identifier = data.aws_subnets.default.ids
@@ -128,4 +134,11 @@ resource "aws_autoscaling_group" "web_asg" {
   health_check_type         = "ELB"
   health_check_grace_period = 30
   force_delete              = true
+
+  min_elb_capacity = var.min_size
+
+  lifecycle {
+    create_before_destroy = true
+  }
+
 }

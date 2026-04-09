@@ -28,6 +28,6 @@ all_ips = ["0.0.0.0/0"]
 variable "ami_id" {
   description = "The AMI ID to use for the EC2 instances"
   type        = string
-  default     = "ami-02dfbd4ff395f2a1b"  
+  default     = "ami-0c3389a4fa5bddaad"  
 }
 
