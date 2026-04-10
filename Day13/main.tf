@@ -36,7 +36,6 @@ data "aws_secretsmanager_secret_version" "rds_secret" {
   secret_id = aws_secretsmanager_secret.rds_secret.id
 }
 
-
 resource "aws_security_group" "rds_sg" {
   name        = "rds-secure-sg"
   description = "Restrict DB access"
